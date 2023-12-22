@@ -71,6 +71,12 @@
                         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" HeaderText="The following errors have been detected:" />
                     </td>
                 </tr>
+                <tr>
+                    <td class="auto-style1">&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblDisplay" runat="server"></asp:Label>
+                    </td>
+                </tr>
             </table>
         </div>
     </form>

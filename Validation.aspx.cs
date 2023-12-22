@@ -18,7 +18,7 @@ namespace Practical7
         protected Boolean isValidCard(string cardNumber) 
         {
             Boolean isValid = false;
-            if(string.IsNullOrEmpty(cardNumber)) 
+            if(string.IsNullOrEmpty(cardNumber)==false) 
             {  
                 
                 if(Regex.IsMatch(cardNumber, "^4\\d{15}") && rblCardType.SelectedIndex == 0 )
@@ -30,6 +30,16 @@ namespace Practical7
                 { 
                     isValid = true; 
                 }
+            }
+            else
+            {
+                lblMessage.Text = "You have entered the following <br>" +
+                    "User name :" + txtName.Text + "<br>" +
+                    "Password :" + txtPassword.Text + "<br>" +
+                    "Date of birth:" + txtDOB.Text + "<br>" +
+                    "Credit Card Number:" + txtCardNumber.Text ;
+
+                Response.Write("<script>alert('your message here')</script>");
             }
             return isValid;
         }
